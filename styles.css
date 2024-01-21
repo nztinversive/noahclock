@@ -1,33 +1,57 @@
-body {
-    font-family: 'Arial', sans-serif;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Consolas', 'Arial', monospace;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
 }
 
 .container {
     text-align: center;
+    font-size: 2em; /* Larger font size for better visibility */
 }
 
 h1 {
     margin-bottom: 30px;
+    color: #fff; /* White text for the title */
 }
 
 #countdown {
     display: flex;
-    justify-content: center;
+    justify-content: space-around; /* This will space out the time sections */
+    align-items: center;
+    width: 100%; /* Use the full width of the container */
+    max-width: 600px; /* Maximum width of the countdown */
+    background: rgba(0, 0, 0, 0.75); /* Slightly transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    flex-wrap: wrap; /* Wrap onto the next line if space is limited */
 }
 
 .time {
-    background: #333;
-    color: #fff;
-    border-radius: 5px;
-    margin: 0 10px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
+    margin: 10px;
+    flex-basis: 19%; /* Each time section will take up roughly 20% of the container width */
+    text-align: center;
+}
+
+.time-title {
+    font-size: 0.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ccc; /* Light grey color for the titles */
+}
+
+.time-value {
+    font-size: 1.5em; /* Larger font size for the time values */
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #ff2d55; /* Red color for the time values */
+    background: #222; /* Darker background for the time values */
+    padding: 5px;
+    border-radius: 5px; /* Rounded corners for the time values */
+    display: inline-block; /* Align the time values next to each other */
 }
