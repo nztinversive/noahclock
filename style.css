@@ -4,7 +4,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    margin: 0;
 }
 
 .container {
@@ -21,13 +23,19 @@ h1 {
 }
 
 .time {
-    background: #333;
+    background: #444; /* Darker background for the time sections */
     color: #fff;
     border-radius: 5px;
     margin: 0 10px;
     padding: 20px;
     display: flex;
+    flex-direction: column; /* Aligns titles above numbers */
     justify-content: center;
     align-items: center;
     width: 100px;
+}
+
+.time-title {
+    font-size: 14px;
+    margin-bottom: 10px;
 }
