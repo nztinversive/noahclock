@@ -1,17 +1,16 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Consolas', 'Arial', monospace;
     background-color: #000; /* Black background */
     color: #fff; /* White text */
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Consolas', 'Courier New', monospace;
 }
 
 .container {
     text-align: center;
-    font-size: 2em; /* Larger font size for better visibility */
 }
 
 h1 {
@@ -21,37 +20,34 @@ h1 {
 
 #countdown {
     display: flex;
-    justify-content: space-around; /* This will space out the time sections */
+    justify-content: center;
     align-items: center;
-    width: 100%; /* Use the full width of the container */
-    max-width: 600px; /* Maximum width of the countdown */
-    background: rgba(0, 0, 0, 0.75); /* Slightly transparent black background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    flex-wrap: wrap; /* Wrap onto the next line if space is limited */
+    font-size: 5em; /* Larger font size for the digital look */
+    color: #4CAF50; /* Green color like digital clocks */
 }
 
 .time {
-    margin: 10px;
-    flex-basis: 19%; /* Each time section will take up roughly 20% of the container width */
-    text-align: center;
+    margin: 0 20px; /* Spacing between segments */
+    position: relative; /* For positioning the ':' pseudo-elements */
+}
+
+.time:not(:last-child):after {
+    content: ':';
+    position: absolute;
+    right: -30px; /* Adjust as needed */
+    font-size: 0.5em; /* Smaller font size for ':' to mimic your provided image */
+    color: #4CAF50;
 }
 
 .time-title {
-    font-size: 0.5em;
+    display: block;
+    font-size: 0.2em; /* Smaller font size for titles */
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #ccc; /* Light grey color for the titles */
+    margin-bottom: -0.2em; /* Adjust spacing between title and number */
 }
 
 .time-value {
-    font-size: 1.5em; /* Larger font size for the time values */
-    letter-spacing: 3px;
-    font-weight: bold;
-    color: #ff2d55; /* Red color for the time values */
-    background: #222; /* Darker background for the time values */
-    padding: 5px;
-    border-radius: 5px; /* Rounded corners for the time values */
-    display: inline-block; /* Align the time values next to each other */
+    letter-spacing: -5px; /* Adjust spacing between digits */
+    line-height: 0.8em; /* Adjust line height to prevent extra vertical space */
 }
