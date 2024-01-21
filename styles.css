@@ -1,0 +1,33 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+}
+
+.time {
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
