@@ -1,42 +1,44 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Consolas', 'Arial', monospace;
+    background-color: #000;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
 }
 
 .container {
     text-align: center;
-    font-size: 2em; /* Larger font size for better visibility */
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2em;
 }
 
 #countdown {
-    display: flex;
-    flex-direction: column; /* Stack the titles vertically */
-    background-color: #222; /* Dark background for the countdown */
+    background-color: #222;
     padding: 20px;
-    border-radius: 10px; /* Rounded corners for the container */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Shadow effect for depth */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 .time {
-    margin: 10px 0; /* Spacing between time sections */
-    padding: 10px 0; /* Padding for each time section */
+    margin: 10px 0;
 }
 
 .time-title {
-    font-size: 0.5em; /* Smaller font size for titles */
-    letter-spacing: 2px; /* Space out the letters for the titles */
-    text-transform: uppercase; /* Uppercase letters for titles */
-    margin-bottom: 5px; /* Space between title and numbers */
+    display: block;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .time-value {
-    font-size: 1.2em; /* Larger font size for the time values */
-    letter-spacing: 3px; /* Space out the numbers */
-    font-weight: bold; /* Make the numbers bold */
+    display: block;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    font-weight: bold;
 }
