@@ -12,70 +12,70 @@ body, html {
 
 .container {
     text-align: center;
-    width: 100%;
+    width: 90%; /* Use a percentage of the viewport width */
     max-width: 600px; /* Maximum width of the container */
-    margin: 0 auto; /* Center the container */
+    margin: auto;
 }
 
 h1 {
     color: #fff;
-    font-size: 4vw; /* Responsive font size based on viewport width */
-    margin-bottom: 1rem;
+    font-size: 6vw; /* Responsive font size based on viewport width */
+    margin: 20px 0;
 }
 
 #countdown {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* Wrap items on smaller screens */
+    flex-direction: column; /* Stack the items vertically */
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .time {
-    flex: 1 0 20%; /* flex-grow | flex-shrink | flex-basis */
-    margin: 0.5rem;
-    min-width: 60px; /* Minimum width for very small screens */
+    width: 100%; /* Use the full width available */
+    margin: 10px 0;
 }
 
 .time-title {
-    font-size: 3vw; /* Responsive font size based on viewport width */
-    text-transform: uppercase;
+    font-size: 5vw; /* Responsive font size based on viewport width */
     color: #ccc;
+    margin-bottom: 5px;
 }
 
 .time-value {
-    font-size: 8vw; /* Larger font size for the time values */
+    font-size: 15vw; /* Larger font size for the time values, responsive */
     color: #4CAF50;
+    letter-spacing: normal; /* Reset any previous letter-spacing */
+    padding: 0 5px; /* Add some padding if needed */
 }
 
-@media (max-width: 600px) {
+/* Adjustments for landscape orientation and tablets */
+@media (orientation: landscape), (min-width: 600px) {
+    #countdown {
+        flex-direction: row; /* Side-by-side for larger screens */
+        flex-wrap: wrap; /* Allow wrapping for many items */
+    }
     .time {
-        flex-basis: 25%; /* Take up more space on smaller screens */
+        width: auto; /* Width can adjust based on content */
+        margin: 5px; /* Smaller margin */
     }
-
     .time-title {
-        font-size: 4vw;
+        font-size: 3vw; /* Smaller font size */
     }
-
     .time-value {
-        font-size: 10vw; /* Increase font size on smaller screens */
+        font-size: 8vw; /* Smaller font size for the values */
     }
 }
 
-@media (max-width: 400px) {
+/* Further adjustments for desktops */
+@media (min-width: 900px) {
     h1 {
-        font-size: 6vw;
+        font-size: 2vw; /* Even smaller font size for very wide views */
     }
-
-    .time {
-        flex-basis: 50%; /* Each time section takes half the width */
-    }
-
     .time-title {
-        font-size: 5vw;
+        font-size: 1.5vw; /* Smaller font size */
     }
-
     .time-value {
-        font-size: 15vw; /* Further increase font size for very small screens */
+        font-size: 4vw; /* Smaller font size for the values */
     }
 }
